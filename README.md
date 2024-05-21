@@ -1,4 +1,4 @@
-#Software de Gestão de Condomínio
+# Software de Gestão de Condomínio
 Este é um software de gestão de condomínio desenvolvido com React, Typescript e styled-components.
 
 Visão Geral
