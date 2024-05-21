@@ -30,10 +30,10 @@ O objetivo deste projeto foi desenvolver uma solução inovadora para simplifica
 
 5. O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
 
-### Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * React: Biblioteca JavaScript para construção de interfaces de usuário.
 * Typescript: Superset do JavaScript que adiciona tipagem estática ao código.
 * styled-components: Biblioteca para estilização de componentes utilizando strings literais.
 
-Autor
+## Autor
 Bernardo Reis e Lucas Janzack / Condo Smart - https://github.com/devBernardo-Mendes/pit-cotemig-2024
