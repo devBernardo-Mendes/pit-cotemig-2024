@@ -1,4 +1,4 @@
-# Software de Gestão de Condomínio
+# Software de Gestão de Condomínio - Condo Smart
 Este é um sistema web de gestão de condomínio desenvolvido como trabalho de conclusão de curso PIT (Projeto de Inovação Tecnológica) da Faculdade Cotemig. Foi construído utilizando React, Typescript e styled-components como principais recursos tecnológicos.
 
 ## Visão Geral
