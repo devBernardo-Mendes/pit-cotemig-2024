@@ -1,10 +1,21 @@
 import React from "react";
-import { ContainerSC } from "./styles/styled";
+import {
+  ContainerSC,
+  WelcomeSC,
+  ProfileSC,
+  UserNameSC,
+  TitleSC,
+} from "./styles/styled";
 
 const MainHeader: React.FC = () => {
   return (
     <ContainerSC>
-      <h1>MainHeader</h1>
+      <TitleSC>CondoSmart</TitleSC>
+
+      <ProfileSC>
+        <WelcomeSC>Olá, </WelcomeSC>
+        <UserNameSC>Bernardo Reis!</UserNameSC>
+      </ProfileSC>
     </ContainerSC>
   );
 };
