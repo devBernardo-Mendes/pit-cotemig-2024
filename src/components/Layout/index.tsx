@@ -1,15 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { ContainerSC } from "./styles/styled";
 import MainHeader from "../HeaderMain";
 import Content from "../Content";
 import Aside from "../Aside";
 
-const Layout: React.FC = () => {
+interface IProps {
+  children?: ReactNode;
+}
+
+const Layout: React.FC<IProps> = ({ children }) => {
   return (
     <ContainerSC>
       <MainHeader />
       <Aside />
-      <Content />
+      <Content>{children}</Content>
     </ContainerSC>
   );
 };
