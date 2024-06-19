@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { ContainerSC } from "./styles/styled";
 
-const Content: React.FC = () => {
-  return (
-    <ContainerSC>
-      <h1>Content</h1>
-    </ContainerSC>
-  );
+interface IProps {
+  children?: ReactNode;
+}
+
+const Content: React.FC<IProps> = ({ children }) => {
+  return <ContainerSC>{children}</ContainerSC>;
 };
 
 export default Content;
