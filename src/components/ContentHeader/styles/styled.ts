@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface IProps {
+  lineColor: string;
+}
+
 export const ContainerSC = styled.div`
   width: 100%;
 
@@ -9,7 +13,7 @@ export const ContainerSC = styled.div`
   margin-bottom: 25px;
 `;
 
-export const TitleContainerSC = styled.div`
+export const TitleContainerSC = styled.div<IProps>`
   > h1 {
     color: ${(props) => props.theme.colors.black};
 
@@ -17,9 +21,11 @@ export const TitleContainerSC = styled.div`
       content: "";
       display: block;
       width: 55px;
-      border-bottom: 10px solid ${(props) => props.theme.colors.warning};
+      border-bottom: 10px solid ${(props) => props.lineColor};
     }
   }
 `;
 
-export const ControllersSC = styled.div``;
+export const ControllersSC = styled.div`
+  display: flex;
+`;

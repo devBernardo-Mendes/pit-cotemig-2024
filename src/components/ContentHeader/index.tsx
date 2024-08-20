@@ -2,16 +2,19 @@ import React from "react";
 
 import { ContainerSC, ControllersSC, TitleContainerSC } from "./styles/styled";
 
-const ContentHeader: React.FC = () => {
+interface IProps {
+  title: string;
+  lineColor: string;
+  children: React.ReactNode;
+}
+
+const ContentHeader: React.FC<IProps> = ({ children, lineColor, title }) => {
   return (
     <ContainerSC>
-      <TitleContainerSC>
-        <h1>Título</h1>
+      <TitleContainerSC lineColor={lineColor}>
+        <h1>{title}</h1>
       </TitleContainerSC>
-      <ControllersSC>
-        <button type="button">Botao A</button>
-        <button type="button">Botao B</button>
-      </ControllersSC>
+      <ControllersSC>{children}</ControllersSC>
     </ContainerSC>
   );
 };

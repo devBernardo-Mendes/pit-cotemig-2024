@@ -8,7 +8,12 @@ import {
   TitleSC,
 } from "./styles/styled";
 import logoImg from "../../assets/logo.png";
-import { MdDashboard, MdExitToApp } from "react-icons/md";
+import {
+  MdArrowDownward,
+  MdArrowUpward,
+  MdDashboard,
+  MdExitToApp,
+} from "react-icons/md";
 
 const Aside: React.FC = () => {
   return (
@@ -19,11 +24,20 @@ const Aside: React.FC = () => {
       </HeaderSC>
 
       <MenuContainerSC>
-        <MenuIntemLinkSC href="#">
+        <MenuIntemLinkSC href="/condosmart">
           <MdDashboard />
           Dashboard
         </MenuIntemLinkSC>
-        <MenuIntemLinkSC href="#">
+        <MenuIntemLinkSC href="/list/entry-balance">
+          <MdArrowUpward />
+          Entradas
+        </MenuIntemLinkSC>
+
+        <MenuIntemLinkSC href="/list/exit-balance">
+          <MdArrowDownward />
+          Saídas
+        </MenuIntemLinkSC>
+        <MenuIntemLinkSC href="/#">
           <MdExitToApp />
           Sair
         </MenuIntemLinkSC>
