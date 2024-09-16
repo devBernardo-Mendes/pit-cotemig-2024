@@ -1,22 +1,15 @@
 import { ContainerSC, TagSC } from "./styles/styled";
 
 interface IProps {
-  cardColor: string;
   tagColor: string;
   title: string;
   subtitle: string;
   amount: string;
 }
 
-const HistoryCard = ({
-  cardColor,
-  tagColor,
-  amount,
-  subtitle,
-  title,
-}: IProps) => {
+const HistoryCard = ({ tagColor, amount, subtitle, title }: IProps) => {
   return (
-    <ContainerSC color={cardColor}>
+    <ContainerSC>
       <TagSC color={tagColor} />
       <div>
         <span>{title}</span>
