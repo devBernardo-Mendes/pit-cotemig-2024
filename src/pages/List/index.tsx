@@ -95,6 +95,62 @@ const List: React.FC = () => {
           cardColor="#F4F4F4"
           tagColor="#FF6961"
         />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />{" "}
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
+        <HistoryCard
+          title="Seguro Residencial - Outubro"
+          subtitle="18/10/2024"
+          amount="R$ 250,00"
+          cardColor="#F4F4F4"
+          tagColor="#FF6961"
+        />
       </ContentHistorySC>
     </ContainerSC>
   );
