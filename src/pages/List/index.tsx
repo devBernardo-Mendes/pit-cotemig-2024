@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { ContainerSC, ContentHistorySC } from "./styles/styled";
 import ContentHeader from "../../components/ContentHeader";
 import SelectedInput from "../../components/SelectedInput";
 import HistoryCard from "../../components/HistoryCard";
+import { useLocation } from "react-router-dom";
 
 const List: React.FC = () => {
   const options = [
@@ -19,9 +20,23 @@ const List: React.FC = () => {
       label: "Opção 3",
     },
   ];
+  const paramns = useLocation();
+
+  const handleTitle = useMemo(() => {
+    const title =
+      paramns.pathname === "/list/entry-balance" ? "Entradas" : "Saídas";
+    return title;
+  }, [paramns.pathname]);
+
+  const handleLineColor = useMemo(() => {
+    const lineColor =
+      paramns.pathname === "/list/entry-balance" ? "#FF6961" : "#FFF";
+    return lineColor;
+  }, [paramns.pathname]);
+
   return (
     <ContainerSC>
-      <ContentHeader title="Saídas" lineColor="#FF6961">
+      <ContentHeader title={handleTitle} lineColor={handleLineColor}>
         <SelectedInput options={options} />
       </ContentHeader>
       <ContentHistorySC>
