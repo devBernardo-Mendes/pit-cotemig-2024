@@ -1,12 +1,12 @@
 import React, { useMemo } from "react";
-import { ContainerSC, ContentHistorySC } from "./styles/styled";
+import { ContainerSC, ContentHistorySC, FiltersSC } from "./styles/styled";
 import ContentHeader from "../../components/ContentHeader";
 import SelectedInput from "../../components/SelectedInput";
 import HistoryCard from "../../components/HistoryCard";
 import { useLocation } from "react-router-dom";
 
 const List: React.FC = () => {
-  const options = [
+  const months = [
     {
       value: "Option 1",
       label: "Opção 1",
@@ -20,6 +20,21 @@ const List: React.FC = () => {
       label: "Opção 3",
     },
   ];
+
+  const years = [
+    {
+      value: 2022,
+      label: 2022,
+    },
+    {
+      value: 2023,
+      label: 2023,
+    },
+    {
+      value: 2024,
+      label: 2024,
+    },
+  ];
   const paramns = useLocation();
 
   const handleTitle = useMemo(() => {
@@ -30,15 +45,24 @@ const List: React.FC = () => {
 
   const handleLineColor = useMemo(() => {
     const lineColor =
-      paramns.pathname === "/list/entry-balance" ? "#FF6961" : "#FFF";
+      paramns.pathname === "/list/entry-balance" ? "#03BB85" : "#FF6961";
     return lineColor;
   }, [paramns.pathname]);
 
   return (
     <ContainerSC>
       <ContentHeader title={handleTitle} lineColor={handleLineColor}>
-        <SelectedInput options={options} />
+        <SelectedInput options={months} />
+        <SelectedInput options={years} />
       </ContentHeader>
+      <FiltersSC>
+        <button type="button" className="tag-filter tag-filter-recurrent">
+          Recorrentes
+        </button>
+        <button type="button" className="tag-filter tag-filter-eventual">
+          Eventuais
+        </button>
+      </FiltersSC>
       <ContentHistorySC>
         <HistoryCard
           title="Condomínio - Janeiro"
