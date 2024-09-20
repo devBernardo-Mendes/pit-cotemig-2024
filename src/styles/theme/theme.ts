@@ -10,6 +10,7 @@ export default {
     white: "#FFF",
     black: "#000",
     gray: "#BFBFBF",
+    blue: "#0b57d0",
 
     sucess: "#03BB85",
     info: "#3B5998",
