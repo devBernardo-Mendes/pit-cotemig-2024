@@ -8,13 +8,14 @@ import {
 } from "./styles/styled";
 
 const MainHeader: React.FC = () => {
+  const data = { name: "Bernardo Reis!" };
   return (
     <ContainerSC>
-      <TitleSC>CondoSmart</TitleSC>
+      <TitleSC>Condo Smart</TitleSC>
 
       <ProfileSC>
         <WelcomeSC>Olá, </WelcomeSC>
-        <UserNameSC>Bernardo Reis!</UserNameSC>
+        <UserNameSC>{data.name}</UserNameSC>
       </ProfileSC>
     </ContainerSC>
   );

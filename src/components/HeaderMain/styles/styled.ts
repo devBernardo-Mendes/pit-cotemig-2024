@@ -17,9 +17,14 @@ export const TitleSC = styled.h1`
   color: ${(props) => props.theme.colors.black};
 `;
 export const ProfileSC = styled.div`
+  display: flex;
+  align-items: center;
   color: ${(props) => props.theme.colors.black};
 `;
 
 export const WelcomeSC = styled.h3``;
 
-export const UserNameSC = styled.span``;
+export const UserNameSC = styled.span`
+  margin-left: 5px;
+  margin-right: 10px;
+`;
