@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 interface LoginResponse {
-  token: string; // Supondo que a resposta tenha um token de autenticação
+  token: string;
   email: string;
   senha: string;
 }
@@ -38,19 +38,20 @@ const useLogin = () => {
       );
 
       if (!response.ok) {
+        const errorData = await response.json();
         throw new Error(
-          "Erro ao Logar: Verifique seu e-mail e senha e tente novamente."
+          errorData.message || "Erro ao Logar: Verifique seu e-mail e senha."
         );
       }
 
       const data: LoginResponse = await response.json();
       localStorage.setItem("token", data.token);
       setIsAuthenticated(true);
-      setLoading(false);
       return data;
     } catch (err: any) {
+      setError(err.message || "Erro desconhecido. Tente novamente mais tarde.");
+    } finally {
       setLoading(false);
-      setError(err.message);
     }
   };
 

@@ -14,8 +14,10 @@ import {
   MdDashboard,
   MdExitToApp,
 } from "react-icons/md";
+import useLogin from "../../pages/Signin/hooks/useGetLogin";
 
 const Aside: React.FC = () => {
+  const { logout } = useLogin();
   return (
     <ContainerSC>
       <HeaderSC>
@@ -37,7 +39,7 @@ const Aside: React.FC = () => {
           <MdArrowDownward />
           Saídas
         </MenuIntemLinkSC>
-        <MenuIntemLinkSC href="/login">
+        <MenuIntemLinkSC href="/login" onClick={logout}>
           <MdExitToApp />
           Sair
         </MenuIntemLinkSC>
