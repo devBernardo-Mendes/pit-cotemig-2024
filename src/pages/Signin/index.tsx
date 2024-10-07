@@ -9,17 +9,19 @@ import Modal from "../../components/modalError";
 
 const Signin: React.FC = () => {
   const navigate = useNavigate();
-  const { login, loading, error, isAuthenticated } = useLogin();
+  const { login, loading, error } = useLogin();
   const [email, setEmail] = useState<string>("");
   const [senha, setSenha] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const handleSubmitLogin = async (event: React.FormEvent) => {
+  const handleSubmitLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    await login(email, senha);
-    if (isAuthenticated) {
-      navigate("/dashboard");
+    const response = await login(email, senha);
+
+    if (response) {
+      navigate("/condosmart");
+      window.location.reload();
     } else {
       setShowModal(true);
     }
