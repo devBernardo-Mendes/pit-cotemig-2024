@@ -6,7 +6,11 @@ import AuthRouter from "./auth.routes";
 import useLogin from "../pages/Signin/hooks/useGetLogin";
 
 const Routes: React.FC = () => {
-  const { isAuthenticated } = useLogin();
+  const { isAuthenticated, loading } = useLogin();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <BrowserRouter>
