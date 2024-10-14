@@ -10,6 +10,7 @@ import listOfMonths from "../../utils/months";
 import formatCurrency from "../../utils/formarCurrency";
 import formatDate from "../../utils/formateDate";
 import { v4 as uuidv4 } from "uuid";
+import NoResults from "../../components/NoResults";
 
 interface IData {
   id: string;
@@ -137,15 +138,19 @@ const List: React.FC = () => {
         </button>
       </FiltersSC>
       <ContentHistorySC>
-        {data.map((item) => (
-          <HistoryCard
-            key={item.id}
-            tagColor={item.tagColor}
-            title={item.description}
-            subtitle={item.dateFormatted}
-            amount={item.amountFormatted}
-          />
-        ))}
+        {data.length > 0 ? (
+          data.map((item) => (
+            <HistoryCard
+              key={item.id}
+              tagColor={item.tagColor}
+              title={item.description}
+              subtitle={item.dateFormatted}
+              amount={item.amountFormatted}
+            />
+          ))
+        ) : (
+          <NoResults />
+        )}
       </ContentHistorySC>
     </ContainerSC>
   );
