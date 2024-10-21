@@ -4,6 +4,7 @@ import {
   HeaderSC,
   LogImgSC,
   MenuContainerSC,
+  MenuIntemLinkExitSC,
   MenuIntemLinkSC,
   TitleSC,
 } from "./styles/styled";
@@ -74,11 +75,11 @@ const Aside: React.FC = () => {
           <MdAnnouncement />
           Mural de Avisos
         </MenuIntemLinkSC>
-        <MenuIntemLinkSC href="/login" onClick={logout}>
-          <MdExitToApp />
-          Sair
-        </MenuIntemLinkSC>
       </MenuContainerSC>
+      <MenuIntemLinkExitSC href="/login" onClick={logout}>
+        <MdExitToApp />
+        Sair
+      </MenuIntemLinkExitSC>
     </ContainerSC>
   );
 };
