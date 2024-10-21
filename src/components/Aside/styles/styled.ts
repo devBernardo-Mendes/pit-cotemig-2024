@@ -3,9 +3,15 @@ import styled from "styled-components";
 export const ContainerSC = styled.div`
   grid-area: AS;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   border-right: 0.063rem solid ${(props) => props.theme.colors.gray};
   padding-left: 20px;
   background-color: #f4f4f4;
+
+  height: 100vh;
 `;
 
 export const HeaderSC = styled.header`
@@ -38,6 +44,26 @@ export const MenuIntemLinkSC = styled.a`
   transition: opacity 0.3s;
   display: flex;
   align-items: center;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  > svg {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+`;
+
+export const MenuIntemLinkExitSC = styled.a`
+  color: ${(props) => props.theme.colors.black};
+  text-decoration: none;
+  margin: 7px 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+
+  margin-top: auto;
 
   &:hover {
     opacity: 0.7;
