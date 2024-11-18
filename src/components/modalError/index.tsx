@@ -26,7 +26,7 @@ const ErrorMessage = styled.p`
   margin: 0;
 `;
 
-const Modal: React.FC<{ message: string; onClose: () => void }> = ({
+const ModalError: React.FC<{ message: string; onClose: () => void }> = ({
   message,
   onClose,
 }) => {
@@ -51,4 +51,4 @@ const Modal: React.FC<{ message: string; onClose: () => void }> = ({
   );
 };
 
-export default Modal;
+export default ModalError;

@@ -5,7 +5,7 @@ import { ContainerSC, ControllersSC, TitleContainerSC } from "./styles/styled";
 interface IProps {
   title: string;
   lineColor: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const ContentHeader: React.FC<IProps> = ({ children, lineColor, title }) => {
