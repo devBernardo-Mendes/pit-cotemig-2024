@@ -5,7 +5,7 @@ import Input from "../../components/input";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import useLogin from "./hooks/useGetLogin";
-import Modal from "../../components/modalError";
+import ModalError from "../../components/modalError";
 
 const Signin: React.FC = () => {
   const navigate = useNavigate();
@@ -58,7 +58,10 @@ const Signin: React.FC = () => {
         </Button>
       </FormSC>
       {showModal && (
-        <Modal message={error || "Erro desconhecido"} onClose={closeModal} />
+        <ModalError
+          message={error || "Erro desconhecido"}
+          onClose={closeModal}
+        />
       )}
     </ContainerSC>
   );
