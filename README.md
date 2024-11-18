@@ -28,7 +28,7 @@ O objetivo deste projeto foi desenvolver uma solução inovadora para simplifica
    npm start
    ```
 
-5. O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
+5. O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000/login).
 
 ## Tecnologias Utilizadas
 * React: Biblioteca JavaScript para construção de interfaces de usuário.
